@@ -1,14 +1,22 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-  font-family: "Poppins", sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background: #f9f9f9;
+
+	/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.7;
+  color: #1e293b;
+  background: #f5f7fa;
+}
+
+/* HEADER */
 header {
   text-align: center;
-  padding: 40px 20px;
+  padding: 50px 20px;
   background: #1e293b;
   color: white;
 }
@@ -17,45 +25,120 @@ header {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  border: 3px solid #2563eb;
+  object-fit: cover;
 }
 
-h1 { font-size: 2em; }
-h2 { font-size: 1.1em; font-weight: 400; color: #cbd5e1; }
+h1 {
+  font-size: 2em;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
 
+h2 {
+  font-size: 1em;
+  font-weight: 400;
+  color: #cbd5e1;
+}
+
+.contact {
+  margin-top: 15px;
+  font-size: 0.95em;
+  color: #e2e8f0;
+}
+
+.contact a {
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* SECTIONS */
 section {
-  padding: 30px 20px;
-  max-width: 900px;
-  margin: auto;
+  padding: 35px 30px;
+  max-width: 850px;
+  margin: 25px auto;
   background: white;
-  border-radius: 12px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  margin-top: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
 }
 
+
+
+/* TITRES */
 h3 {
   color: #0f172a;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   border-left: 4px solid #2563eb;
-  padding-left: 8px;
+  padding-left: 10px;
+  font-size: 1.3em;
+  font-weight: 600;
 }
 
-ul { margin-left: 20px; }
-.item { margin-bottom: 20px; }
+/* CONTENU */
+section p,
+section ul,
+section li {
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
 
+section pre {
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+section ul {
+  margin-left: 20px;
+  list-style: disc;
+}
+
+.item {
+  margin-bottom: 25px;
+}
+
+h4 {
+  font-size: 1.05em;
+  color: #1e293b;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+i {
+  color: #64748b;
+}
+
+/* FOOTER */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 25px;
   background: #1e293b;
   color: white;
-  margin-top: 30px;
+  margin-top: 40px;
   font-size: 0.9em;
+  letter-spacing: 0.2px;
 }
+
+@media (max-width: 700px) {
+  body {
+    font-size: 0.95rem;
+  }
+  section {
+    padding: 25px 20px;
+  }
+}
+
+
 section {
   opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.5s ease;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
+
 section.visible {
   opacity: 1;
   transform: translateY(0);
